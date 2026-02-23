@@ -1,7 +1,5 @@
 #include "stm32l552xx.h"
 
-void GPIO_Init(void);
-void delay_ms(uint32_t ms);
 int main(void) {
     RCC->AHB2ENR |= RCC_AHB2ENR_GPIOCEN;
     volatile uint32_t temp = RCC->AHB2ENR;
