@@ -1,13 +1,17 @@
 **Description**
+
 This repository is a template project for the Nucleo-L552ZE-Q, including the CMSIS dependencies necessary for a full linux toolchain. The sample project should work as-is without any code changes.
 
 **Usage**
+
 After writing your code, run "make" to build the project, then "make flash" to write it to your board.
 
 VSCode actions are included for GUI interaction under Visual Studio Code's "Run and Debug" tab, one for flashing the program and one for debugging. The debug action supports breakpoints and viewing registers using marus25's Cortex-Debug extension.
+
 **IMPORTANT**: The debug action **DOES NOT** rebuild the program. You **MUST RUN** "Flash and run" before debugging if you've made changes to the code.
 
 **Installation Requirements**
+
 Dependencies:
 - arm-none-eabi-gcc
 - arm-none-eabi-gdb (optional, adds debugger support for VScode)
