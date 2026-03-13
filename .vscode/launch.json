@@ -8,6 +8,7 @@
         {
             "name": "Cortex Debug",
             "cwd": "${workspaceFolder}",
+            "preLaunchTask": "flash-and-run",
             "executable": "./executable.elf",
             "request": "launch",
             "type": "cortex-debug",
@@ -30,11 +31,12 @@
         },
 
         {
-            "name": "Flash and Run",
-            "type": "node-terminal",
-            "request": "launch",
-            "cwd": "${workspaceFolder}",
-            "command": "make && make flash && exit",
+        "name": "Flash and Run",
+        "type": "node",
+        "request": "launch",
+        "preLaunchTask": "flash-and-run",
+        "cwd": "${workspaceFolder}",
+        "runtimeExecutable": "/bin/ls"
         }
 
     ]

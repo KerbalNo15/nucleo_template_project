@@ -1,0 +1,21 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "flash-and-run",
+      "type": "shell",
+      "command": "make && make flash",
+      "options": {
+        "cwd": "${workspaceFolder}",
+        "shell": {
+          "executable": "/bin/bash",
+          "args": ["-c"]
+        }
+      },
+      "presentation": {
+        "showReuseMessage": false,
+        "close": true
+      }  
+    }
+  ]
+}
