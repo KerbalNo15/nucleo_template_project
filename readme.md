@@ -8,8 +8,6 @@ After writing your code, run "make" to build the project, then "make flash" to w
 
 VSCode actions are included for GUI interaction under Visual Studio Code's "Run and Debug" tab, one for flashing the program and one for debugging. The debug action supports breakpoints and viewing registers using marus25's Cortex-Debug extension.
 
-**IMPORTANT**: The debug action **DOES NOT** rebuild the program. You **MUST RUN** "Flash and run" before debugging if you've made changes to the code.
-
 **Installation Requirements**
 
 Dependencies:
