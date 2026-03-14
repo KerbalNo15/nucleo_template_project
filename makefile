@@ -33,5 +33,5 @@ flash: blink.elf
 flash_dfu: executable.bin
 	-dfu-util -a 0 -i 0 -s 0x08000000:leave -D executable.bin -w
 
-executable.bin:
+executable.bin: blink.elf
 	arm-none-eabi-objcopy -O binary executable.elf executable.bin
