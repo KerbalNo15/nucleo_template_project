@@ -16,6 +16,22 @@
         "showReuseMessage": false,
         "close": true
       }  
+    },
+    {
+      "label": "dfu-flash-and-run",
+      "type": "shell",
+      "command": "make && make flash_dfu",
+      "options": {
+        "cwd": "${workspaceFolder}",
+        "shell": {
+          "executable": "/bin/bash",
+          "args": ["-c"]
+        }
+      },
+      "presentation": {
+        "showReuseMessage": false,
+        "close": true
+      }  
     }
   ]
 }

@@ -37,6 +37,15 @@
         "preLaunchTask": "flash-and-run",
         "cwd": "${workspaceFolder}",
         "runtimeExecutable": "/bin/ls"
+        },
+        
+        {
+        "name": "DFU Flash and Run",
+        "type": "node",
+        "request": "launch",
+        "preLaunchTask": "dfu-flash-and-run",
+        "cwd": "${workspaceFolder}",
+        "runtimeExecutable": "/bin/ls"
         }
 
     ]

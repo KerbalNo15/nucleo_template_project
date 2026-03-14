@@ -25,7 +25,13 @@ system_stm32l5xx.o: system_stm32l5xx.c
 
 .PHONY: clean
 clean:
-	rm -f *.o *.elf
+	rm -f *.o *.elf *.bin
 
 flash: blink.elf
 	$(PROGRAMMER) $(PROGRAMMER_FLAGS) -c "program executable.elf verify reset exit"
+
+flash_dfu: executable.bin
+	-dfu-util -a 0 -i 0 -s 0x08000000:leave -D executable.bin -w
+
+executable.bin:
+	arm-none-eabi-objcopy -O binary executable.elf executable.bin

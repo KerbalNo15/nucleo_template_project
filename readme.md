@@ -6,7 +6,9 @@ This repository is a template project for the Nucleo-L552ZE-Q, including the CMS
 
 After writing your code, run "make" to build the project, then "make flash" to write it to your board.
 
-VSCode actions are included for GUI interaction under Visual Studio Code's "Run and Debug" tab, one for flashing the program and one for debugging. The debug action supports breakpoints and viewing registers using marus25's Cortex-Debug extension.
+VSCode actions are included for GUI interaction under Visual Studio Code's "Run and Debug" tab, two for flashing the program and one for debugging. The debug action supports breakpoints and viewing registers using marus25's Cortex-Debug extension.
+
+This project supports loading firmware using DFU mode if dfu-util is installed. Use the DFU action in VSCode or "make flash_dfu" (do this to troubleshoot flashing from VSCode) to flash over USB without the ST-link debugger. Keep in mind that the board needs to be in DFU mode for this to work, which is accomplished by pulling the BOOT0 pin (PH3 on this board) high during reset. dfu-util may need to be run as root in order to write to the device, depending on your distro; if this is the case, add `sudo` to the flash_dfu action in the makefile or try configuring a udev rule so that your regular user can access the USB device.
 
 **Installation Requirements**
 
